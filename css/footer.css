@@ -1,0 +1,29 @@
+footer{
+    background-color: #E7A7F1;
+    height: 10vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0 2vh 0;
+    gap: 5vw;
+    
+    .icono{
+        height: clamp(2.3em,3.2em,6vw);;
+        width: auto;
+    }
+    .icono:hover{
+        cursor: pointer;
+        transform:scale(1.2);
+    }
+    .bi-facebook:hover{
+        fill: #0d6efd;
+    }
+
+    .bi-whatsapp:hover{
+        fill: #198754;
+    }
+
+    .bi-instagram:hover{
+        fill: #dc3545;
+    }
+}

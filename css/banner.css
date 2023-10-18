@@ -1,0 +1,31 @@
+.banner{
+    background-image: url("../assets/salon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+
+
+    .logo{
+        text-align: center;
+    }
+    .servicio {
+        display: flex;
+        width: 100%;
+        flex: 0 0 30%; /* Establece la altura del servicio al 30% de la altura del banner */
+        background-color: rgba(173, 17, 199, 0.5); /* Color #AD11C7 con 50% de transparencia */
+        margin-top: auto; /* Coloca el servicio en la parte inferior del banner */
+        border: 5px solid #E7A7F1;
+        justify-content: center;
+        align-items: center;
+        .texto{
+            font-size: clamp(1.3em,1.7em,4vw);
+            color:#D9D9D9;
+            text-shadow: 6px 2px 6px #000000;
+        }
+    }
+}
