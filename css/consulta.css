@@ -3,25 +3,33 @@
     flex-direction: column;
     padding: 10px 0 10px 0;
     align-items: center;
+    width: 100vw;
 
     .titulo{
         font-size: clamp(1em,2.5em,3em);
         font-family: 'Indie Flower', cursive;
         font-weight: 600;
+        text-align: center;
     }
     .container{
         display:flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
-        .row{
-            width: 40em;
-            .col{
-                width: 50%;
-            }
+        .input{
+            width: 70%;
         }
         .btn{
             width: fit-content;
         }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .input{
+        width: 80%;
+        min-width: 250px;
     }
 }
