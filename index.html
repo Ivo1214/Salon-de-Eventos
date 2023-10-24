@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/footer.css">
 
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sigmar&display=swap" rel="stylesheet">
@@ -25,6 +26,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #E7A7F1;">
@@ -155,8 +158,8 @@
     <div class="consulta">
         <h2 class="titulo">Consultar disponibilidad</h2>
         <p class="texto">Ingresa tus datos para realizar la consulta. Te enviaremos un mensaje a tu telefono.</p>
-        <form class="container">
-            <select class="input selector form-select-lg mb-3" aria-label="Default select example">
+        <form id="formConsulta" class="container">
+            <select class="input selector form-select-lg mb-3" name="tipo_evento"aria-label="Default select example">
                   <option selected>Tipo de evento</option>
                   <option value="1">Boda</option>
                   <option value="2">Cumpleaños</option>
@@ -164,22 +167,22 @@
                   <option value="4">Reunion</option>
             </select>
                 <div class="input form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="name@example.com">
                   <label for="floatingInput">Nombre</label>
                 </div>
                 <div class="input form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email</label>
                 </div>
                 <div class="input form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="dia/mes/año">
+                    <input type="text" class="form-control" name="fecha" id="floatingInput" placeholder="name@example.com" value="dia/mes/año">
                     <label for="floatingInput">Fecha del evento</label>
                 </div>
                 <div class="input form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="text" class="form-control" name="telefono" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Telefono</label>
                 </div>
-            <button type="submit" class="btn btn-primary">Consultar</button>
+            <button id="submitConsulta" type="submit" class="btn btn-primary">Consultar</button>
           </form>
     </div>
     <footer>
@@ -201,4 +204,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
+
+<script src="./js/sweetalert.js"></script>
 </html>
