@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Sigmar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -41,19 +42,21 @@
                 <a class="nav-link active" aria-current="page" href="#">INICIO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">NOSOTROS</a>
+                <a class="nav-link" href="#nosotros">NOSOTROS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">CONSEJOS</a>
+                <a class="nav-link" href="#consejos">CONSEJOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">CONTACTO</a>
+                <a class="nav-link" href="#contacto">CONTACTO</a>
               </li>
             </ul>
           </div>
           <a class="navbar-brand" href="#">Joestar´s</a>
         </div>
     </nav>
+
+
     <div class="banner">
         <!-- <h2 class="logo">Joestar´s Party Salon</h2> -->
         <img class="logo" src="./assets/logo.jpg" alt="logo">
@@ -61,15 +64,15 @@
             <h3 class="texto">Especialistas en salon y eventos</h3>
         </div>
     </div>
-    <div class="nosotros">
+
+
+    <div id="nosotros" class="nosotros">
         <h2 class="titulo">NOSOTROS</h2>
         <div class="container">
-            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Proin varius laoreet pulvinar. 
-                Donec vel mollis urna. 
-                Aenean vel tincidunt mi. Pellentesque consectetur 
-                risus ut diam malesuada volutpat. Vivamus leo risus, 
-                tristique at sollicitudin eget, euismod in est.</p>
+            <p class="texto">Bienvenidos a nuestro elegante y versátil salón de fiestas, el escenario perfecto para hacer realidad tus eventos más especiales. 
+              Desde celebraciones íntimas hasta eventos extravagantes, nuestro espacio se adapta a cada ocasión con un toque de encanto y sofisticación. 
+              Con instalaciones modernas y una atención meticulosa a los detalles, nuestro salón de fiestas se convierte en el lienzo ideal donde tus sueños toman forma.
+            </p>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -101,120 +104,133 @@
                 </a>
             </div>
         </div>
+        <p class="final-introduccion">¡Descubre la magia de celebrar con Joestar's!</p>
     </div>
 
 
-    
-
-    <div class="consejos">
+    <div id="consejos" class="consejos">
         <h2 class="titulo">CONSEJOS</h2>
         <div class="cards">
           <div class="card bodas" >
             <h5 class="card-title">Boda</h5>
             <img src="./assets/boda.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <a id="card_button" href="#" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver consejos</a>
+              <a id="card_button_boda" href="#" class="btn btn-primary btn_modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tipo="boda">Ver consejos</a>
             </div>
         </div>
         <div class="card cumpleanios" >
             <h5 class="card-title">Cumpleaños</h5>
             <img src="./assets/cumpleaños.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Ver consejos</a>
+              <a id="card_button_cumpleaños" href="#" class="btn btn-primary btn_modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tipo="cumpleaños">Ver consejos</a>
             </div>
         </div>
         <div class="card eventos" >
             <h5 class="card-title">Eventos</h5>
             <img src="./assets/evento.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Ver consejos</a>
+              <a id="card_button_evento" href="#" class="btn btn-primary btn_modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tipo="evento">Ver consejos</a>
             </div>
         </div>
         <div class="card reuniones" >
             <h5 class="card-title">Reuniones</h5>
             <img src="./assets/reunion.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <a href="#" class="btn btn-primary">Ver consejos</a>
+              <a id="card_button_reunion" href="#" class="btn btn-primary btn_modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tipo="reunion">Ver consejos</a>
             </div>
         </div>
         </div>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Consejos para bodas</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <ul>
-                    <li>Consejo 1</li>
-                    <li>Consejo 2</li>
-                    <li>Consejo 3</li>
-                    <li>Consejo 4</li>
-                  </ul>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Consejos para eventos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="modal-body-content">
+                <!-- Contenido del modal generado dinámicamente -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="boton-cerrar btn btn-secondary" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg> Cerrar</button>
               </div>
             </div>
           </div>
+        </div>
     </div>
-    <div class="contacto">
+
+
+    <div id="contacto" class="contacto">
         <h2 class="titulo">CONTACTO</h2>
         <p class="texto">Puedes ponerte en contacto con nosotros a 
             traves de nuestras redes sociales o por telefono</p>
         <div class="iconos-contacto">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#0d6efd" class="icono bi bi-facebook" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--facebook)" class="icono bi bi-facebook" viewBox="0 0 16 16">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#dc3545" class="icono bi bi-instagram" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--instagram)" class="icono bi bi-instagram" viewBox="0 0 16 16">
                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
             </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#198754" class="icono bi bi-whatsapp" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--whatsapp)" class="icono bi bi-whatsapp" viewBox="0 0 16 16">
                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
             </svg>
         </div>
     </div>
-    <div class="consulta">
+
+
+    <div id="consulta" class="consulta">
         <h2 class="titulo">Consultar disponibilidad</h2>
-        <p class="texto">Ingresa tus datos para realizar la consulta. Te enviaremos un mensaje a tu telefono.</p>
+        <p class="texto">Ingresa tus datos para realizar la consulta.</p>
+        <p class="texto">Se enviara un mensaje a la administración con los datos ingresados.</p>
         <form id="formConsulta" class="container">
-            <select class="input selector form-select-lg mb-3" name="tipo_evento"aria-label="Default select example">
-                  <option selected>Tipo de evento</option>
+            <select class="input selector form-select-lg mb-3" name="tipo_evento"aria-label="Default select example" required>
+                  <option class="default-value">Tipo de evento <span class="requerido">*</span></option>
                   <option value="1">Boda</option>
                   <option value="2">Cumpleaños</option>
                   <option value="3">Evento</option>
                   <option value="4">Reunion</option>
             </select>
                 <div class="input form-floating mb-3">
-                  <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput">Nombre</label>
+                  <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="Nombre" required>
+                  <label for="floatingInput">Nombre <span class="requerido">*</span></label>
                 </div>
                 <div class="input form-floating mb-3">
                     <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
                     <label for="floatingInput">Email</label>
                 </div>
-                <div class="input form-floating mb-3">
-                    <input type="text" class="form-control" name="fecha" id="floatingInput" placeholder="name@example.com" value="dia/mes/año">
-                    <label for="floatingInput">Fecha del evento</label>
+                <!-- <div class="input form-floating mb-3">
+                    <input type="text" class="form-control" name="fecha" id="floatingInput" placeholder="dia/mes/año" required>
+                    <label for="floatingInput">Fecha del evento (dia/mes/año) <span class="requerido">*</span></label>
+                </div> -->
+                <div class="input input-group mb-3">
+                  <input type="text" class="form-control" name="dia" placeholder="Dia *" aria-label="Dia" required>
+                  <span class="input-group-text">/</span>
+                  <input type="text" class="form-control" name="mes" placeholder="Mes *" aria-label="Mes" required>
+                  <span class="input-group-text">/</span>
+                  <input type="text" class="form-control" name="anio" placeholder="Año *" aria-label="Año" required>
                 </div>
                 <div class="input form-floating mb-3">
-                    <input type="text" class="form-control" name="telefono" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Telefono</label>
-                </div>
-            <button id="submitConsulta" type="submit" class="btn btn-primary">Consultar</button>
+                  <input type="text" class="form-control" name="comentario" id="floatingInput" placeholder="Puedes añadir comentarios">
+                  <label for="floatingInput">Comentario</label>
+              </div>
+            <button id="submitConsulta" type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+              <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+            </svg> Consultar</button>
           </form>
     </div>
+
+
     <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icono bi bi-facebook" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--facebook)" class="icono bi bi-facebook" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icono bi bi-instagram" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--instagram)" class="icono bi bi-instagram" viewBox="0 0 16 16">
             <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icono bi bi-whatsapp" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--whatsapp)" class="icono bi bi-whatsapp" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </footer>
@@ -227,5 +243,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
 
-<script src="./js/sweetalert.js"></script>
+<script src="./js/submitConsulta.js"></script>
+<script src="./js/consejos.js"></script>
 </html>

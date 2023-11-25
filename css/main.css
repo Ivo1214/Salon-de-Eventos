@@ -1,3 +1,8 @@
+:root {
+  --whatsapp: #198754;
+  --instagram: #dc3545;
+  --facebook: #0d6efd;
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +14,6 @@ body {
     /* background-color: aquamarine !important; */
     background: rgb(173,168,173);
     background: linear-gradient(223deg, rgba(173,168,173,0.7959558823529411) 25%, rgba(172,95,185,0.865983893557423) 50%, rgba(173,168,173,0.8) 75%);
-  
+    overflow-x: hidden;
   
   }

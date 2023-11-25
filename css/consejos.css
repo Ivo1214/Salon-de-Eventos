@@ -48,11 +48,44 @@
                     background-color: #D9D9D9;
                     color: #000000;
                     border: 5px solid hsl(291, 84%, 42%, 0.3);
+                    font-family: 'Montserrat', cursive;
                 }
     
                 .btn:hover{
                     cursor: pointer;
                     transform:scale(1.2);
+                }
+            }
+        }
+    }
+    .modal-content{
+        background: rgb(200, 198, 200);
+        .modal-title{
+            text-align: center;
+            font-size: clamp(1em,2.7em,4em);
+            font-weight: 600;
+            margin: 0;
+            font-family: 'Island Moments', cursive;
+        }
+        .modal-footer{
+            .boton-cerrar{
+                background-color: rgb(174, 68, 68);
+            }
+            .btn:hover{
+                cursor: pointer;
+                transform:scale(1.2);
+            }
+        }
+        .modal-body{
+            .lista{
+                display:flex;
+                flex-direction: column;
+                gap:15px;
+                font-family: 'Montserrat', cursive;
+                .subrayado{
+                    text-decoration: underline;
+                    font-weight: bold;
+                    color:hsl(291, 84%, 42%, 0.5);
                 }
             }
         }

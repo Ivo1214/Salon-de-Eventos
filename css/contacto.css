@@ -13,6 +13,7 @@
     .texto{
         text-align: center;
         font-size: clamp(1.1em,1.7em,3.6vw);
+        font-family: 'Montserrat', cursive;
     }
     .iconos-contacto{
         display: flex;
