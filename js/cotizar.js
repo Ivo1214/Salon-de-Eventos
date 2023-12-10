@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtengo el elemento que renderizará los consejos
+    let tipoEvento = "";
+    let opcionesFinales = "";
+     // Obtengo el elemento que renderizará los consejos
     let modalBody = document.querySelector('.modal-cotizar');
 
     // Se obtiene el elemento select
     let selectTipoFiesta = document.querySelector('.seleccionar-fiesta');
 
-    // Inicializar el modal
-    let myModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
+    // Inicializar los modales
+    let cotizarModal = new bootstrap.Modal(document.getElementById('exampleModalToggle'));
+    let modal2 = new bootstrap.Modal(document.getElementById('exampleModalToggle2'));
 
     // Elemento para mostrar el total
     let totalElement = document.createElement('div');
@@ -196,14 +199,18 @@ document.addEventListener('DOMContentLoaded', function () {
         switch (selectedEventType) {
             case 'Cumpleaños':
                 mostrarOpciones(opcionesCumpleaños);
+                tipoEvento = "Cumpleaños";
                 break;
             case 'Boda':
                 mostrarOpciones(opcionesBoda);
+                tipoEvento = "Boda";
                 break;
             case 'Reunion':
+                tipoEvento = "Reunion";
                 mostrarOpciones(opcionesReunion);
                 break;
             case 'Evento':
+                tipoEvento = "Evento";
                 mostrarOpciones(opcionesEvento);
                 break;
             default:
@@ -233,34 +240,41 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Asignar evento al botón "Solicitar"
-        document.getElementById('btnSolicitar').addEventListener('click', function () {
-            // Obtener todas las opciones marcadas
-            const opcionesMarcadas = document.querySelectorAll('input:checked');
+    document.getElementById('btnSolicitar').addEventListener('click', function () {
+        // Obtener todas las opciones marcadas
+        const opcionesMarcadas = document.querySelectorAll('input:checked');
 
-            // Calcular el total de los valores seleccionados
-            let total = valorReserva;
-            opcionesMarcadas.forEach(opcion => {
-                total += parseInt(opcion.value);
-            });
-
-            // Crear una cadena con las opciones seleccionadas
-            let opcionesSeleccionadas = `Total: $${total}\n`;
-
-            opcionesMarcadas.forEach(opcion => {
-                // Obtener el texto de la etiqueta asociada al input
-                const label = document.querySelector(`label[for="${opcion.id}"]`);
-                opcionesSeleccionadas += `${label.textContent.trim()} \n`;
-            });
-
-            // Mostrar las opciones seleccionadas (puedes ajustar esto según tus necesidades)
-            alert(`Opciones seleccionadas:\n${opcionesSeleccionadas}`);
+        // Calcular el total de los valores seleccionados
+        let total = valorReserva;
+        opcionesMarcadas.forEach(opcion => {
+            total += parseInt(opcion.value);
         });
 
-        
-        
+        // Crear una cadena con las opciones seleccionadas
+        let opcionesSeleccionadas = `Total: $${total}\n`;
+
+        opcionesMarcadas.forEach(opcion => {
+            // Obtener el texto de la etiqueta asociada al input
+            const label = document.querySelector(`label[for="${opcion.id}"]`);
+            opcionesSeleccionadas += `${label.textContent.trim()}\n`;
+        });
+
+        // Asignar el valor a opcionesFinales
+        opcionesFinales = opcionesSeleccionadas;
+
+        // Mostrar las opciones seleccionadas (puedes ajustar esto según tus necesidades)
+        console.log(opcionesSeleccionadas);
+
+        // Cerrar el primer modal
+        cotizarModal.hide();
+
+        // Abrir el segundo modal
+        modal2.show();
+    });
+
 
         // Mostrar el modal
-        myModal.show();
+        // myModal.show();
     });
 
 
@@ -297,4 +311,58 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("mostrarPrecio").innerHTML = `$${valorReserva + total}`;
     }
 
+
+// --------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------
+//                                                  Envio de la consulta
+// --------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------
+
+
+    let formulario = document.getElementById('formConsulta');
+    formulario.addEventListener("submit", function(e){
+        e.preventDefault();
+        let fecha = (e.target.dia.value) +"/"+(e.target.mes.value) +"/"+ + (e.target.anio.value)
+        
+        // Comprobación del email
+        let email = "";
+        if (e.target.email.value !== "") {
+            // Definir una expresión regular para verificar que ".com" esté al final
+            const regex = /\.com$/i;
+
+            // Comprobar si el email cumple con la expresión regular
+            const cumpleRegex = regex.test(e.target.email.value);
+            if (cumpleRegex === false) {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'El E-Mail no es válido',
+                    text: ``,
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+                return (null);
+            }
+            email = ` y mi email ${e.target.email.value}`;
+        };
+        
+        // Se comprueba si añadió un comentario
+        let comentario = "";
+        if (e.target.comentario.value !== "") {
+            comentario = `Comentario: ${e.target.comentario.value}`;
+        };
+
+        // Envío del mensaje
+        let mensaje = `Hola, ¿cómo estás?. Quisiera saber si es posible realizar ${tipoEvento}
+        para la fecha ${fecha}. Mi nombre es ${e.target.nombre.value}${email}.
+        ${comentario}.\n Cotizacion realizada: ${opcionesFinales}`;
+
+        console.log(mensaje);
+
+        // URL de WhatsApp con el número de teléfono y el mensaje
+        // let urlWhatsApp = 'https://wa.me/' + numeroTelefono + '?text=' + encodeURIComponent(mensaje);
+        // window.location.href = urlWhatsApp;
+
+
+    });
 });
