@@ -107,6 +107,89 @@
         <p class="final-introduccion">¡Descubre la magia de celebrar con Joestar's!</p>
     </div>
 
+    <div id="consulta" class="consulta">
+      <h2 class="titulo">Consultar disponibilidad</h2>
+      <p class="texto">Ingresa tus datos para realizar la consulta.</p>
+      <p class="texto">Se enviara un mensaje a la administración con los datos ingresados.</p>
+      <!-- <form id="formConsulta" class="container">
+          <select class="input selector form-select-lg mb-3" name="tipo_evento"aria-label="Default select example" required>
+                <option class="default-value">Tipo de evento <span class="requerido">*</span></option>
+                <option value="1">Boda</option>
+                <option value="2">Cumpleaños</option>
+                <option value="3">Evento</option>
+                <option value="4">Reunion</option>
+          </select>
+              <div class="input form-floating mb-3">
+                <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="Nombre" required>
+                <label for="floatingInput">Nombre <span class="requerido">*</span></label>
+              </div>
+              <div class="input form-floating mb-3">
+                  <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email</label>
+              </div>
+              <div class="input form-floating mb-3">
+                  <input type="text" class="form-control" name="fecha" id="floatingInput" placeholder="dia/mes/año" required>
+                  <label for="floatingInput">Fecha del evento (dia/mes/año) <span class="requerido">*</span></label>
+              </div>
+              <div class="input input-group mb-3">
+                <input type="text" class="form-control" name="dia" placeholder="Dia *" aria-label="Dia" required>
+                <span class="input-group-text">/</span>
+                <input type="text" class="form-control" name="mes" placeholder="Mes *" aria-label="Mes" required>
+                <span class="input-group-text">/</span>
+                <input type="text" class="form-control" name="anio" placeholder="Año *" aria-label="Año" required>
+              </div>
+              <div class="input form-floating mb-3">
+                <input type="text" class="form-control" name="comentario" id="floatingInput" placeholder="Puedes añadir comentarios">
+                <label for="floatingInput">Comentario</label>
+            </div> -->
+          <button id="submitConsulta" type="submit" class="btn btn-primary btn_modal_cotizar" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+          </svg> Cotizar</button>
+
+        <!-- </form> -->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Cotizar</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <select class="form-select seleccionar-fiesta" aria-label="Default select example">
+                <option selected>Selecciona el tipo de fiesta</option>
+                <option value="Cumpleaños">Cumpleaños</option>
+                <option value="Boda">Boda</option>
+                <option value="Reunion">Reunion</option>
+                <option value="Evento">Evento</option>
+              </select>
+              <div class="modal-body modal-cotizar">
+                <!-- Contenido del modal generado dinámicamente -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="boton-cerrar btn btn-secondary" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg> Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Hide this modal and show the first with the button below.
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
 
     <div id="consejos" class="consejos">
         <h2 class="titulo">CONSEJOS</h2>
@@ -181,46 +264,7 @@
     </div>
 
 
-    <div id="consulta" class="consulta">
-        <h2 class="titulo">Consultar disponibilidad</h2>
-        <p class="texto">Ingresa tus datos para realizar la consulta.</p>
-        <p class="texto">Se enviara un mensaje a la administración con los datos ingresados.</p>
-        <form id="formConsulta" class="container">
-            <select class="input selector form-select-lg mb-3" name="tipo_evento"aria-label="Default select example" required>
-                  <option class="default-value">Tipo de evento <span class="requerido">*</span></option>
-                  <option value="1">Boda</option>
-                  <option value="2">Cumpleaños</option>
-                  <option value="3">Evento</option>
-                  <option value="4">Reunion</option>
-            </select>
-                <div class="input form-floating mb-3">
-                  <input type="text" class="form-control" name="nombre" id="floatingInput" placeholder="Nombre" required>
-                  <label for="floatingInput">Nombre <span class="requerido">*</span></label>
-                </div>
-                <div class="input form-floating mb-3">
-                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <!-- <div class="input form-floating mb-3">
-                    <input type="text" class="form-control" name="fecha" id="floatingInput" placeholder="dia/mes/año" required>
-                    <label for="floatingInput">Fecha del evento (dia/mes/año) <span class="requerido">*</span></label>
-                </div> -->
-                <div class="input input-group mb-3">
-                  <input type="text" class="form-control" name="dia" placeholder="Dia *" aria-label="Dia" required>
-                  <span class="input-group-text">/</span>
-                  <input type="text" class="form-control" name="mes" placeholder="Mes *" aria-label="Mes" required>
-                  <span class="input-group-text">/</span>
-                  <input type="text" class="form-control" name="anio" placeholder="Año *" aria-label="Año" required>
-                </div>
-                <div class="input form-floating mb-3">
-                  <input type="text" class="form-control" name="comentario" id="floatingInput" placeholder="Puedes añadir comentarios">
-                  <label for="floatingInput">Comentario</label>
-              </div>
-            <button id="submitConsulta" type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-              <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-            </svg> Consultar</button>
-          </form>
-    </div>
+    
 
 
     <footer>
@@ -245,4 +289,5 @@
 
 <script src="./js/submitConsulta.js"></script>
 <script src="./js/consejos.js"></script>
+<script src="./js/cotizar.js"></script>
 </html>
