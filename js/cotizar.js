@@ -219,10 +219,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Agregar botón "Cotizar"
-        modalBody.innerHTML += `<hr>
-        <div class="modal-footer">
-            <button id="btnCotizar" class="btn btn-primary">Cotizar</button>
-            <h4 id="mostrarPrecio">$${valorReserva}</h4>
+        modalBody.innerHTML += `
+        <div class="modal-body-buttons">
+            <div class="boton-cotizar">
+                <button id="btnCotizar" class="btn btn-primary">Cotizar</button>
+                <h4 id="mostrarPrecio">$${valorReserva}</h4>
+            </div>
             <button id="btnSolicitar" class="btn btn-success">Solicitar</button>
         </div>`;
 
@@ -284,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let categoria in opciones) {
             if (opciones.hasOwnProperty(categoria)) {
                 // Agregar título para la categoría
-                modalBody.innerHTML += `<h3>${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>`;
+                modalBody.innerHTML += `<h3 class="titulo-categoria">${categoria.charAt(0).toUpperCase() + categoria.slice(1)}</h3>`;
                 
                 // Agregar opciones dentro de la categoría
                 opciones[categoria].forEach(opcion => {

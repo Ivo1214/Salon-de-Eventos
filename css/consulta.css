@@ -41,6 +41,68 @@
             transform:scale(1.2);
         }
     }
+
+    .modal-content{
+        background: rgb(200, 198, 200);
+        .selector{
+            padding: 10px 0 0 10px ;
+            width: 60%;
+            display: flex;
+        }
+        .modal-title{
+            text-align: center;
+            font-size: clamp(1em,2.7em,4em);
+            font-weight: 600;
+            margin: 0;
+            font-family: 'Island Moments', cursive;
+        }
+        .modal-footer{
+            .boton-cerrar{
+                background-color: rgb(174, 68, 68);
+            }
+            .btn:hover{
+                cursor: pointer;
+                transform:scale(1.2);
+            }
+        }
+        .segundo-footer{
+            justify-content: space-between;
+        }
+        .modal-body{
+            .modal-body-buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .boton-cotizar{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                }
+                .btn{
+                    width: fit-content;
+                    font-family: 'Montserrat', cursive;
+                }
+                .btn:hover{
+                    cursor: pointer;
+                    transform:scale(1.2);
+                }
+            }
+            .titulo-categoria{
+                font-size: clamp(1em,2.5em,3em);
+                font-family: 'Indie Flower', cursive;
+                font-weight: 600;
+            }
+            .form-check-label{
+                font-family: 'Montserrat', cursive;
+                .precio{
+                    font-weight: bold;
+                    color:hsla(138, 66%, 36%);
+                }
+            }
+        }
+    }
 }
 
 

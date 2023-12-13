@@ -108,9 +108,9 @@
     </div>
 
     <div id="consulta" class="consulta">
-      <h2 class="titulo">Consultar disponibilidad</h2>
-      <p class="texto">Ingresa tus datos para realizar la consulta.</p>
-      <p class="texto">Se enviara un mensaje a la administración con los datos ingresados.</p>
+      <h2 class="titulo">Cotizar y consultar disponibilidad</h2>
+      <p class="texto">Con el siguiente formulario puedes cotizar tu fiesta.</p>
+      <p class="texto">Al finalizar se enviara un mensaje a la administración con los datos ingresados.</p>
           <button id="submitConsulta" type="submit" class="btn btn-primary btn_modal_cotizar" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
             <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
           </svg> Cotizar</button>
@@ -120,16 +120,18 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Cotizar</h1>
+                <h1 class="modal-title" id="exampleModalToggleLabel">Cotizar</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <select class="form-select seleccionar-fiesta" aria-label="Default select example">
-                <option selected>Selecciona el tipo de fiesta</option>
-                <option value="Cumpleaños">Cumpleaños</option>
-                <option value="Boda">Boda</option>
-                <option value="Reunion">Reunion</option>
-                <option value="Evento">Evento</option>
-              </select>
+              <div class="selector">
+                <select class="form-select seleccionar-fiesta" aria-label="Default select example">
+                  <option selected>Selecciona el tipo de fiesta</option>
+                  <option value="Cumpleaños">Cumpleaños</option>
+                  <option value="Boda">Boda</option>
+                  <option value="Reunion">Reunion</option>
+                  <option value="Evento">Evento</option>
+                </select>
+              </div>
               <div class="modal-body modal-cotizar">
                 <!-- Contenido del modal generado dinámicamente -->
               </div>
@@ -146,7 +148,7 @@
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Introduzca sus datos...</h1>
+                <h1 class="modal-title" id="exampleModalToggleLabel2">Introduzca sus datos...</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -171,7 +173,7 @@
                         <label for="floatingInput">Comentario</label>
                     </div>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer segundo-footer">
                 <button id="submitConsulta" type="submit" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                   <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                 </svg> Consultar</button>
