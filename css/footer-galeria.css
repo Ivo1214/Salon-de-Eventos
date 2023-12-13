@@ -1,0 +1,18 @@
+footer{
+    background-color: #E7A7F1;
+    height: 10vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0 2vh 0;
+    gap: 5vw;
+    
+    .icono{
+        height: clamp(2.3em,5em,6vw);;
+        width: auto;
+    }
+    .icono:hover{
+        cursor: pointer;
+        transform:scale(1.2);
+    }
+}
