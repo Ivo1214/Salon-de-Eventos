@@ -1,3 +1,7 @@
+.consulta .btn_modal_cotizar:hover {
+    cursor: pointer;
+    transform:scale(1.4) !important;
+}
 .consulta {
     display: flex;
     flex-direction: column;
@@ -5,7 +9,9 @@
     align-items: center;
     width: 100vw;
     padding: 0 10px 15px 10px;
+    margin-bottom: 50px;
 
+    
     .input{
         .requerido{
             font-size: 20px;
