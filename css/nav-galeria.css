@@ -3,6 +3,7 @@
     transition: all 100ms ease-in-out;
     padding-left: 20px;
     text-shadow: 6px 3px 20px #6f0764;
+    -webkit-text-stroke: 1px white;
   }
 
 .nav-link{
