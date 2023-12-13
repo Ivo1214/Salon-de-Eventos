@@ -6,7 +6,7 @@ footer{
     align-items: center;
     padding: 2vh 0 2vh 0;
     gap: 5vw;
-    
+    border-top: 3px solid #ffffff;
     .icono{
         height: clamp(2.3em,5em,6vw);;
         width: auto;

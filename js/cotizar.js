@@ -222,24 +222,12 @@ document.addEventListener('DOMContentLoaded', function () {
         modalBody.innerHTML += `
         <div class="modal-body-buttons">
             <div class="boton-cotizar">
-                <button id="btnCotizar" class="btn btn-primary">Cotizar</button>
+                <h4>Total: </h4>
                 <h4 id="mostrarPrecio">$${valorReserva}</h4>
             </div>
             <button id="btnSolicitar" class="btn btn-success">Solicitar</button>
         </div>`;
 
-        // Asignar evento al botón "Cotizar"
-        document.getElementById('btnCotizar').addEventListener('click', function () {
-            // Sumar todas las opciones marcadas
-            const opcionesMarcadas = document.querySelectorAll('input:checked');
-            let total = 0;
-            opcionesMarcadas.forEach(opcion => {
-                total += parseInt(opcion.value);
-            });
-
-            // Mostrar el total al final del modal
-            mostrarTotal(total);
-        });
 
         // Asignar evento al botón "Solicitar"
     document.getElementById('btnSolicitar').addEventListener('click', function () {
@@ -277,6 +265,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Mostrar el modal
         // myModal.show();
+    });
+
+    modalBody.addEventListener('change', function () {
+        // Sumar todas las opciones marcadas
+        const opcionesMarcadas = document.querySelectorAll('input:checked');
+        let total = 0;
+        opcionesMarcadas.forEach(opcion => {
+            total += parseInt(opcion.value);
+        });
+
+        // Actualizar el total al final del modal
+        mostrarTotal(total);
     });
 
 

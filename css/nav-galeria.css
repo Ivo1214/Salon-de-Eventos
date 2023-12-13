@@ -19,6 +19,8 @@
 }
 
 .navbar{
+    border-bottom: 3px solid #ffffff;
+    transition: all ease-in-out 250ms;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
